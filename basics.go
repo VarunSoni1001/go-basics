@@ -4,6 +4,55 @@ import "fmt"
 
 func main() {
 
+	// data types
+	var intVar int = 42                 // Integer type
+	var floatVar float64 = 3.14         // Floating-point type
+	var stringVar string = "Hello, Go!" // String type
+	var boolVar bool = true             // Boolean type
+	fmt.Println("Integer:", intVar)
+	fmt.Println("Float:", floatVar)
+	fmt.Println("String:", stringVar)
+	fmt.Println("Boolean:", boolVar)
+
+	// naming rules
+	// Valid variable names
+	var validName int = 100
+	var _validName int = 200 // Underscore is allowed
+	var validName2 int = 300 // Can have numbers but not at the start
+	fmt.Println("camelCase, PascalCase, and snake_case are common naming conventions in Go.")
+
+	// Invalid variable names (uncommenting these will cause errors)
+	// var 2invalidName int = 400 // Cannot start with a number
+	// var invalid-name int = 500 // Hyphens are not allowed
+	// var invalid name int = 600 // Spaces are not allowed
+	// var int int = 700 // Cannot use reserved keywords as variable names
+	fmt.Println("Valid variable names:")
+	fmt.Println("validName:", validName)
+	fmt.Println("_validName:", _validName)
+	fmt.Println("validName2:", validName2)
+
+	// formating verbs - Some common formatting verbs in Go
+	// %d - integer, %f - float, %s - string, %t
+	// %T - type, %x - hexadecimal, %e - scientific notation, %c - character, %p - pointer
+	// %q - quoted string, %b - binary representation, %v - default format
+	// %10s - width of 10 for strings, %.2f - precision of 2 for floats
+	fmt.Println("Formatting verbs:")
+	fmt.Printf("Integer: %d\n", intVar)                                     // %d for integers
+	fmt.Printf("Float: %.2f\n", floatVar)                                   // %.2f for
+	fmt.Printf("String: %s\n", stringVar)                                   // %s for strings
+	fmt.Printf("Boolean: %t\n", boolVar)                                    // %t for boolean
+	fmt.Printf("Type: %T\n", intVar)                                        // %T for type of variable
+	fmt.Printf("Hexadecimal: %x\n", intVar)                                 // %x for hexadecimal representation
+	fmt.Printf("Scientific notation: %e\n", floatVar)                       // %e for scientific notation
+	fmt.Printf("Character: %c\n", 'A')                                      // %c for characters
+	fmt.Printf("Pointer: %p\n", &intVar)                                    // %p for pointer addresses
+	fmt.Printf("Width and precision: |%10s|%10.2f|\n", stringVar, floatVar) // Width and precision formatting
+	// fmt.Printf("Invalid format: %q\n", intVar) // %q is for quoted strings, not integers (uncommenting will cause an error)
+	fmt.Printf("Invalid format: %q\n", stringVar) // %q for quoted strings
+	// fmt.Printf("Invalid format: %b\n", floatVar) // %b is for binary representation, not floats (uncommenting will cause an error)
+	fmt.Printf("Invalid format: %b\n", intVar) // %b for binary representation of integers
+	// fmt.Printf("Invalid format: %f\n", boolVar) // %f is for floats, not booleans (uncommenting will cause an error)
+
 	// variables
 	var a int = 10 // works in/out of a function
 	b := 20        // shorthand notation, only works inside a function
